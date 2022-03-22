@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&display=swap');
 
 /*Variables*/
 
@@ -113,9 +114,30 @@ header{
 /* MAIN */
 
 .main{
-    background-image: linear-gradient(to bottom, #edd1de, #f3b9c8, #f6a1a9, #f48c82, #e87b55);
     width:100%;
+    background: linear-gradient(275deg, #edd1de, #f3b9c8, #f6a1a9, #f48c82);
+    background-size: 800% 800%;
+
+    -webkit-animation: movimiento 10s ease infinite;
+    -moz-animation: movimiento 10s ease infinite;
+    animation: movimiento 10s ease infinite;
     
+}
+
+@-webkit-keyframes movimiento {
+    0%{background-position:0% 71%}
+    50%{background-position:100% 30%}
+    100%{background-position:0% 71%}
+}
+@-moz-keyframes movimiento {
+    0%{background-position:0% 71%}
+    50%{background-position:100% 30%}
+    100%{background-position:0% 71%}
+}
+@keyframes movimiento {
+    0%{background-position:0% 71%}
+    50%{background-position:100% 30%}
+    100%{background-position:0% 71%}
 }
 
 .main__article{
@@ -138,6 +160,23 @@ header{
     ". . ."
     "c c c"
     ". . ." ;
+    animation-name: efecto_imagen;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-delay: 5s;
+
+}
+
+@keyframes efecto_imagen {
+    0%{ 
+        background-size: 100%;
+    }
+    50%  { 
+        background-size: 102% ;}
+    75%{ background-size: 100%;}
+    100%{ background-size: cover;
+        }
 }
 
 .main__titulochico{
@@ -148,6 +187,26 @@ header{
     font-weight: bold;
     grid-area: a;
     align-self: flex-end ;
+    animation-name: efecto_mov;
+    animation-duration: 3.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-delay: 5s;
+}   
+
+@keyframes efecto_mov {
+    0%{ 
+        color:white;
+        font-size:2.5em;
+    }
+   
+    50%  { 
+        color: #ffe5df;
+        font-size:2.6em;}
+
+    100%{ 
+        color: white;
+        font-size:2.5em;}
 }
 
 .main__article--titulo{
@@ -160,6 +219,7 @@ header{
     font-weight: bold;
     grid-area: b;
 }
+
 
 .main__article__seccion{
     grid-area: c;
