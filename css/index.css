@@ -253,13 +253,22 @@ header{
     "uno uno uno uno"
     "tres tres dos dos"
     "cuatro cuatro cinco cinco";
-    gap: 10px;
+    gap: 20px;
     
 }
 
 .main__article-multimedia picture img{
     width:100%;
 }
+
+.main__article-multimedia picture img:hover {
+
+    -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+    
+    filter: grayscale(50%);
+    cursor: pointer;
+    
+    }
 
 .main__article-multimedia__seccion{
     background-color: #674949;
@@ -287,6 +296,7 @@ header{
 .main__article-multimedia__seccion img{
     height: 40em;
 }
+
 
 .main-multimedia{
     display: grid;
@@ -471,6 +481,12 @@ header{
 
 
 /* MEDIAQUERYS */
+
+@media screen and (min-width:1400px){
+    .main-multimedia{
+        height: 230vh;
+    }
+}
 
 @media screen and (max-width:1024px){
     .navbar__ul{
