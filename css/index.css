@@ -437,6 +437,19 @@ header{
     gap:15px;
 }
 
+.formulario-bootstrap{
+    justify-self: center;
+}
+.mb-3{
+    font-size: 2.2em; 
+    width: 400px;
+}
+
+.btn{
+    font-size: 2.1em; 
+    justify-self: center;
+}
+
 .main__formulario input{
     width: 20em;
 }
