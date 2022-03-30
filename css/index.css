@@ -521,7 +521,10 @@ header{
 
 @media screen and (min-width:1400px){
     .main-multimedia{
-        height: 300vh;
+        height: 330vh;
+    }
+    .main__article-multimedia{
+        gap: 80px;
     }
 }
 
