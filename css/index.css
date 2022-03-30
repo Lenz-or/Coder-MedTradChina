@@ -309,6 +309,7 @@ header{
 
 
 .main-multimedia{
+    height: 330vh;
     display: grid;
     grid-template-columns: repeat(1,1fr);
     grid-template-rows: 10% 30% 180vh;
@@ -574,7 +575,7 @@ header{
         height: 220vh;
         display:grid;
         grid-template-columns: repeat(1,1fr);
-        grid-template-rows: 13.5% 20% 20% 20% 20%;
+        grid-template-rows: 9% 14% 14% 14% 14%;
         grid-template-areas: 
         "uno"
         "dos"
@@ -633,5 +634,43 @@ header{
         height:2em;
     }
 
+
+}
+
+@media screen and (min-width:600px) and (max-width:768px){
+    .main-multimedia{
+        height: 330vh;
+    }
+    
+    .main__article-multimedia{
+        height: 220vh;
+        display:grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: 10.5% 20% 20% 20% 20%;
+        grid-template-areas: 
+        "uno"
+        "dos"
+        "tres"
+        "cuatro"
+        "cinco";
+        gap:140px;
+    }
+
+}
+
+@media screen and (min-width:480px) and (max-width:600px){
+    .main__article-multimedia{
+        height: 220vh;
+        display:grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: 7% 14% 14% 14% 14%;
+        grid-template-areas: 
+        "uno"
+        "dos"
+        "tres"
+        "cuatro"
+        "cinco";
+        gap:140px;
+    }
 
 }
