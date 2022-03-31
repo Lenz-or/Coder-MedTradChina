@@ -1,0 +1,85 @@
+/* MAIN */
+
+.main{
+    background-image: linear-gradient(to bottom, #edd1de, #f3b9c8, #f6a1a9, #f48c82, #e87b55);
+    width:100%;
+
+    .main__article{
+        height: 150vh;
+
+        .main__titulochico{
+            font-size:2.5em;
+            text-align: center;
+            text-transform: uppercase;
+            color: white;
+            font-weight: bold;
+            grid-area: a;
+            align-self: flex-end ;
+            animation-name: efecto_mov;
+            animation-duration: 7s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in;
+            animation-delay: 5s;
+        }   
+
+        &--titulo{
+            margin: 40px;
+            margin-top:10px;
+            font-size:4.5em;
+            text-align: center;
+            text-transform: uppercase;
+            color: white;
+            font-weight: bold;
+            grid-area: b;
+        }
+        
+        .main__article__seccion{
+            grid-area: c;
+
+            
+            .main__article__seccion--p{
+                padding: 20px;
+                margin-left: 20px;
+                margin-right: 20px;
+                font-size: 2.3em;
+                text-align: center;
+                color: white;
+            }
+        }
+    }
+
+    .articulo-uno{
+        height:200vh;
+        background-image: url(../public/img/fondo.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display:grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows:repeat(6,1fr) ;
+        grid-template-areas:
+        ". a ."
+        "b b b"
+        ". . ."
+        ". . ."
+        "c c c"
+        ". . ." ;
+    
+    }
+
+    
+    
+}
+
+
+
+
+/* ----- MEDIAQUERY ----- */
+
+@media screen and (max-width:768px) {
+    
+    
+    .main__article{
+        height: 280vh;
+    }
+
+}

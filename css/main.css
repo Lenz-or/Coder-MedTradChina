@@ -1,5 +1,51 @@
+/*Import*/
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap");
+/* MISCELANEOUS*/
+/*HELPERS*/
+.flex-row {
+  display: flex;
+  flex-direction: row; }
+
+.flex-column {
+  display: flex;
+  flex-direction: column; }
+
+.container {
+  max-width: 1366px;
+  margin: 0 auto; }
+
+/*RESET*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif; }
+
+/*GLOBALS*/
+html {
+  font-size: 62.5%; }
+
+ul {
+  list-style-type: none; }
+
+body {
+  background-image: linear-gradient(to right, #a03e6b, #aa4561, #b04e58, #b45950, #b4654a); }
+
+@keyframes efecto_mov {
+  0% {
+    font-family: 'Quicksand', sans-serif; }
+  50% {
+    font-family: 'Noto Sans SC', sans-serif; }
+  80% {
+    font-family: 'Source Code Pro', monospace; } }
+
+/* PARTIALS */
 header {
-  background-image: var(--nav); }
+  background-image: linear-gradient(to right, #a03e6b, #aa4561, #b04e58, #b45950, #b4654a); }
   header #navbarNavAltMarkup {
     font-size: 21px; }
   header .navbar-collapse {
@@ -41,6 +87,69 @@ header {
   header #check {
     display: none; }
 
+.pieDePagina {
+  height: 200px;
+  background-color: black;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: ". . . . . ." ". . c c . ." ". . . . . ."; }
+  .pieDePagina__titulo {
+    margin: auto;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    grid-area: c; }
+
+/* VIEWS */
+/* MAIN */
 .main {
   background-image: linear-gradient(to bottom, #edd1de, #f3b9c8, #f6a1a9, #f48c82, #e87b55);
   width: 100%; }
+  .main .main__article {
+    height: 150vh; }
+    .main .main__article .main__titulochico {
+      font-size: 2.5em;
+      text-align: center;
+      text-transform: uppercase;
+      color: white;
+      font-weight: bold;
+      grid-area: a;
+      align-self: flex-end;
+      animation-name: efecto_mov;
+      animation-duration: 7s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in;
+      animation-delay: 5s; }
+    .main .main__article--titulo {
+      margin: 40px;
+      margin-top: 10px;
+      font-size: 4.5em;
+      text-align: center;
+      text-transform: uppercase;
+      color: white;
+      font-weight: bold;
+      grid-area: b; }
+    .main .main__article .main__article__seccion {
+      grid-area: c; }
+      .main .main__article .main__article__seccion .main__article__seccion--p {
+        padding: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 2.3em;
+        text-align: center;
+        color: white; }
+  .main .articulo-uno {
+    height: 200vh;
+    background-image: url(../public/img/fondo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: ". a ." "b b b" ". . ." ". . ." "c c c" ". . ."; }
+
+/* ----- MEDIAQUERY ----- */
+@media screen and (max-width: 768px) {
+  .main__article {
+    height: 280vh; } }
