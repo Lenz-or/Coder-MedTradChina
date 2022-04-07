@@ -1,20 +1,36 @@
+.titulo-negrita{
+    
+    margin: 40px;
+    font-size: 4em;
+    text-align: center;
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+}
+
 .articulo-nosotros{
+    height:100vh;
     background-image: url(../public/img/fondosomos.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     display:grid;
-    grid-template-columns: repeat (1, 1fr);
-    grid-template-rows: repeat (3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     grid-template-areas: 
     "nosotros"
     "seccion"
     "seccion";
-    grid-area: titulo;
+
+    .titulo-nosotros{
+        grid-area:nosotros;
+        align-self: center;
+    }
 
     .seccion-nosotros{
         grid-area:seccion;
+        align-self: center;
 
-        .seccion-multimedia--p{
+        .seccion-nosotros--p{
             padding: 20px;
             margin-left: 20px;
             margin-right: 20px;
@@ -26,14 +42,14 @@
 
 }
 
-.titulo-negrita{
+
+@media screen and (max-width:800px) {
     
-    margin: 40px;
-    font-size: 4em;
-    text-align: center;
-    text-transform: uppercase;
-    color: black;
-    font-weight: bold;
+    .main{
+        .articulo-nosotros{
+            height: 220vh;
+        }
+    }
 }
 
 

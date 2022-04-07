@@ -58,31 +58,35 @@
     }
 }
 
-
 @media screen and (max-width:768px) {
+    
+    .main-beneficios{
+        .main__article-beneficios{
+            display:grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 30% 25% 30%;
+            grid-template-areas:
+            "imagen"
+            "beneficios"
+            "video";
 
-    .main__article-beneficios{
-        display:grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 30% 25% 30%;
-        grid-template-areas:
-        "imagen"
-        "beneficios"
-        "video";
-
-        .beneficios-imagen{
-            width:100%;
-
-            img{
+            .seccion-video{
                 width:100%;
             }
-        }
-
-        .seccion-video{
-            width:100%;
-        }
-    }
-
+            
+            .beneficios-imagen{
+                width:100%;
     
-   
+                img{
+                    width:100%;
+                }
+            }
+        }
+    
+        
+
+    }
+    
+
+
 }
