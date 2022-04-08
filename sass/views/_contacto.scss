@@ -10,6 +10,7 @@
         justify-self: center;
 
         .mb-3{
+            @extend .formulario-bootstrap;
             font-size: 2.2em; 
             width: 400px;
 

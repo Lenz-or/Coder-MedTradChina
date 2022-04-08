@@ -1,8 +1,6 @@
 .titulo-negrita{
-    
+    @include fuente-alinear(4em,center);
     margin: 40px;
-    font-size: 4em;
-    text-align: center;
     text-transform: uppercase;
     color: black;
     font-weight: bold;
@@ -31,12 +29,11 @@
         align-self: center;
 
         .seccion-nosotros--p{
+            @include fuente-alinear(2em,center);
             padding: 20px;
             margin-left: 20px;
             margin-right: 20px;
-            text-align: center;
             color: black;
-            font-size: 2em;
         }
     }
 

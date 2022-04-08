@@ -1,34 +1,46 @@
 /* MAIN */
 
+$estilo: (
+color-gradiente: linear-gradient(to bottom, #edd1de, #f3b9c8, #f6a1a9, #f48c82, #e87b55),
+color-blanco: white,
+);
+
+@mixin fuente-alinear($fontsize,$textalign){
+    font-size:$fontsize;
+    text-align: $textalign;
+}
+
+
+
 .main{
-    background-image: linear-gradient(to bottom, #edd1de, #f3b9c8, #f6a1a9, #f48c82, #e87b55);
+    background-image: map-get($estilo,color-gradiente);
     width:100%;
 
     .main__article{
         height: 150vh;
 
         .main__titulochico{
-            font-size:2.5em;
-            text-align: center;
+            @include fuente-alinear(2.5em,center);
             text-transform: uppercase;
-            color: white;
+            color: map-get($estilo,color-blanco);
             font-weight: bold;
             grid-area: a;
             align-self: flex-end ;
+            /*
             animation-name: efecto_mov;
             animation-duration: 7s;
             animation-iteration-count: infinite;
             animation-timing-function: ease-in;
             animation-delay: 5s;
+            */
         }   
 
         &--titulo{
+            @include fuente-alinear(4.5em,center);
             margin: 40px;
             margin-top:10px;
-            font-size:4.5em;
-            text-align: center;
             text-transform: uppercase;
-            color: white;
+            color: map-get($estilo,color-blanco);
             font-weight: bold;
             grid-area: b;
         }
@@ -38,12 +50,11 @@
 
             
             .main__article__seccion--p{
-                padding: 20px;
+                @include fuente-alinear(2.3em,center);
+                padding: 10px;
                 margin-left: 20px;
                 margin-right: 20px;
-                font-size: 2.3em;
-                text-align: center;
-                color: white;
+                color: map-get($estilo,color-blanco);
             }
         }
     }

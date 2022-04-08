@@ -116,16 +116,18 @@ header {
       font-weight: bold;
       grid-area: a;
       align-self: flex-end;
-      animation-name: efecto_mov;
-      animation-duration: 7s;
-      animation-iteration-count: infinite;
-      animation-timing-function: ease-in;
-      animation-delay: 5s; }
+      /*
+            animation-name: efecto_mov;
+            animation-duration: 7s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in;
+            animation-delay: 5s;
+            */ }
     .main .main__article--titulo {
-      margin: 40px;
-      margin-top: 10px;
       font-size: 4.5em;
       text-align: center;
+      margin: 40px;
+      margin-top: 10px;
       text-transform: uppercase;
       color: white;
       font-weight: bold;
@@ -133,11 +135,11 @@ header {
     .main .main__article .main__article__seccion {
       grid-area: c; }
       .main .main__article .main__article__seccion .main__article__seccion--p {
-        padding: 20px;
-        margin-left: 20px;
-        margin-right: 20px;
         font-size: 2.3em;
         text-align: center;
+        padding: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
         color: white; }
   .main .articulo-uno {
     height: 200vh;
@@ -155,9 +157,9 @@ header {
     height: 280vh; } }
 
 .titulo-negrita {
-  margin: 40px;
   font-size: 4em;
   text-align: center;
+  margin: 40px;
   text-transform: uppercase;
   color: black;
   font-weight: bold; }
@@ -178,12 +180,12 @@ header {
     grid-area: seccion;
     align-self: center; }
     .articulo-nosotros .seccion-nosotros .seccion-nosotros--p {
+      font-size: 2em;
+      text-align: center;
       padding: 20px;
       margin-left: 20px;
       margin-right: 20px;
-      text-align: center;
-      color: black;
-      font-size: 2em; }
+      color: black; }
 
 @media screen and (max-width: 800px) {
   .main .articulo-nosotros {
@@ -209,7 +211,7 @@ header {
     gap: 20px; }
     .main-multimedia .main__article-multimedia .main__article-multimedia__seccion {
       background-color: #674949;
-      width: 100em;
+      width: 100%;
       border: 2px solid black;
       border-radius: 15px;
       margin: 10px;
@@ -346,7 +348,7 @@ header {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 30% 15%; }
-  .main-contacto .formulario-bootstrap {
+  .main-contacto .formulario-bootstrap, .main-contacto .formulario-bootstrap .mb-3 {
     justify-self: center; }
     .main-contacto .formulario-bootstrap .mb-3 {
       font-size: 2.2em;
