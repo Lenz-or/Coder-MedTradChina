@@ -28,6 +28,11 @@
         grid-area:seccion;
         align-self: center;
 
+        .seccion-nosotros--h2{
+            text-align: center;
+            color:black;
+        }
+
         .seccion-nosotros--p{
             @include fuente-alinear(2em,center);
             padding: 20px;

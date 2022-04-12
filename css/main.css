@@ -179,6 +179,9 @@ header {
   .articulo-nosotros .seccion-nosotros {
     grid-area: seccion;
     align-self: center; }
+    .articulo-nosotros .seccion-nosotros .seccion-nosotros--h2 {
+      text-align: center;
+      color: black; }
     .articulo-nosotros .seccion-nosotros .seccion-nosotros--p {
       font-size: 2em;
       text-align: center;
