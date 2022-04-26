@@ -19,6 +19,33 @@ color-blanco: white,
     .main__article{
         height: 150vh;
 
+        .main__articlecontenedor{
+            background-image: url(../public/img/fondo.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            grid-area: a;
+            display:grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows:repeat(2,1fr) ;
+            grid-template-areas:
+            "subtitulo subtitulo"
+            "titulo titulo";
+
+            .main__article--titulo{
+                @include fuente-alinear(4.5em,center);
+                margin: 40px;
+                margin-top:10px;
+                text-transform: uppercase;
+                color: map-get($estilo,color-blanco);
+                font-weight: bold;
+                grid-area: titulo;
+            }
+
+            .subtitulo{
+                grid-area: subtitulo;
+            }
+        }
+
         .main__titulochico{
             @include fuente-alinear(2.5em,center);
             text-transform: uppercase;
@@ -35,45 +62,66 @@ color-blanco: white,
             */
         }   
 
-        &--titulo{
-            @include fuente-alinear(4.5em,center);
-            margin: 40px;
-            margin-top:10px;
-            text-transform: uppercase;
-            color: map-get($estilo,color-blanco);
-            font-weight: bold;
-            grid-area: b;
-        }
+        
         
         .main__article__seccion{
-            grid-area: c;
+            background: linear-gradient(0deg, rgba(207,147,186,1) 33%, rgba(242,144,146,1) 99%);;
+            padding: 50px;
+            grid-area: b;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows:repeat(3,1fr) ;
+            grid-template-areas:
+            "titulo titulo"
+            "au ve"
+            "ac acue";
+            gap:50px;
 
-            
+            .titulo-seccion{
+                align-self: center;
+                grid-area: titulo;
+                text-shadow: 0 0 2px black;
+
+            }
+            .sombra{
+                text-shadow: 0 0 2px black;
+            }
+            .main__article__seccion__uno{
+                grid-area: au;
+                width:100%;
+            }
+            .main__article__seccion__dos{
+                grid-area: ve;
+                width:100%;
+            }
+            .main__article__seccion__tres{
+                grid-area: ac;
+                width:100%;
+            }
+            .main__article__seccion__cuatro{
+                grid-area: acue;
+                width:100%;
+            }
             .main__article__seccion--p{
-                @include fuente-alinear(2.3em,center);
-                padding: 10px;
+                @include fuente-alinear(2em,center);
+                padding: 8px;
                 margin-left: 20px;
                 margin-right: 20px;
                 color: map-get($estilo,color-blanco);
+                text-shadow: 0 0 2px black;
+
             }
         }
     }
 
     .articulo-uno{
-        height:200vh;
-        background-image: url(../public/img/fondo.png);
-        background-repeat: no-repeat;
-        background-size: cover;
+        height:210vh;
         display:grid;
-        grid-template-columns: repeat(3,1fr);
-        grid-template-rows:repeat(6,1fr) ;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows:35% 65% ;
         grid-template-areas:
-        ". a ."
-        "b b b"
-        ". . ."
-        ". . ."
-        "c c c"
-        ". . ." ;
+        "a a a"
+        "b b b";
     
     }
 
@@ -86,11 +134,61 @@ color-blanco: white,
 
 /* ----- MEDIAQUERY ----- */
 
+@media screen and (max-width:880px){
+    .main{
+        .main__article{
+            height: 280vh;
+        }
+    }
+}
+
 @media screen and (max-width:768px) {
     
+    .main{
+        .main__article{
+            height: 400vh;
+
+            .main__articlecontenedor{
+                grid-area: a;
+                display:grid;
+                grid-template-columns: 100%;
+                grid-template-rows:repeat(2,1fr) ;
+                grid-template-areas:
+                "subtitulo"
+                "titulo";
+            }
+            .main__article__seccion{
+                padding: 5px;
+                display: grid;
+                grid-template-columns: repeat(1,1fr);
+                grid-template-rows:repeat(5,1fr) ;
+                grid-template-areas:
+                "titulo"
+                "au" 
+                "ve"
+                "ac"
+                "acue";
+
+                .main__article__seccion--p{
+                    
+                    margin-left: 0px;
+                    margin-right: 0px;
+                    
+                }
+            }
+          }
+
+          .articulo-uno{
+            display:grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows:25% 75% ;
+            grid-template-areas:
+            "a a a"
+            "b b b";
+        
+        }
     
-    .main__article{
-        height: 280vh;
+
     }
 
 }
